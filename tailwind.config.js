@@ -6,6 +6,7 @@ export default {
 			colors: {
 				'main-black': '#2d2e32',
 				'main-white': '#f2eded',
+				'main-offwhite': '#f0f0f1',
 				'main-green': '#80c679',
 			},
 			fontFamily: {

@@ -4,7 +4,7 @@ import ProfileImage from '../ProfileImage';
 
 const Introduction = () => {
 	return (
-		<div className='grid grid-cols-5 gap-4 h-screen'>
+		<div className='w-2/3 grid grid-cols-5 gap-4 h-screen'>
 			<div className='col-span-2 flex justify-center items-center'>
 				<ProfileImage />
 			</div>
