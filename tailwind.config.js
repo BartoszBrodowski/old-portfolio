@@ -14,20 +14,20 @@ export default {
 			boxShadow: {
 				image: 'box-shadow 15px 15px 50px rgba(0,0,0,0.2)',
 			},
+			backgroundImage: {
+				'profile-image': 'url(./src//assets/images/shina.png)',
+			},
 			keyframes: {
 				'image-flow': {
 					'0%': {
 						'border-radius': '60% 40% 30% 70% / 60% 30% 70% 40%',
-						background: 'linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%)',
 					},
 					'50%': {
 						'border-radius': '30% 60% 70% 40% / 50% 60% 30% 60%',
-						background: 'linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%)',
 					},
 
 					'100%': {
 						'border-radius': '60% 40% 30% 70% / 60% 30% 70% 40%',
-						background: 'linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%)',
 					},
 				},
 			},
