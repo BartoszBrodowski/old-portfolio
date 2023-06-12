@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,4 +17,11 @@ body {
 	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
 }

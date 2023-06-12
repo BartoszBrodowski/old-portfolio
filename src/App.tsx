@@ -1,7 +1,9 @@
+import Introduction from './components/Introduction';
+
 function App() {
 	return (
-		<div className=''>
-			<h1>Hello World</h1>
+		<div className='w-1/2 m-auto font-poppins'>
+			<Introduction />
 		</div>
 	);
 }
