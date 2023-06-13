@@ -8,6 +8,7 @@ export default {
 				'main-white': '#f2eded',
 				'main-offwhite': '#f0f0f1',
 				'main-green': '#80c679',
+				'linkedin-blue': '#0a66c2',
 			},
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],

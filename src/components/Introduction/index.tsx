@@ -1,6 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
-
 import ProfileImage from '../ProfileImage';
+import Links from '../Links';
 
 const Introduction = () => {
 	return (
@@ -21,6 +21,7 @@ const Introduction = () => {
 				<span className='text-xl'>
 					Hello! I'm Bartosz Brodowski, a Computer Science student. Based in Gdańsk, Poland. 📍
 				</span>
+				<Links />
 			</div>
 		</div>
 	);
