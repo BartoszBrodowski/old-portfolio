@@ -14,7 +14,7 @@ export default {
 				poppins: ['Poppins', 'sans-serif'],
 			},
 			boxShadow: {
-				image: 'box-shadow 15px 15px 50px rgba(0,0,0,0.2)',
+				card: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px',
 			},
 			backgroundImage: {
 				'profile-image': 'url(./src//assets/images/shina.png)',
