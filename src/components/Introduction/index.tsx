@@ -1,7 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import ProfileImage from '../ProfileImage';
 import Links from '../Links';
-import Navbar from '../Navbar';
 
 const Introduction = () => {
 	return (

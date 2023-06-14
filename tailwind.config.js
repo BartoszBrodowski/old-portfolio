@@ -21,20 +21,25 @@ export default {
 			},
 			keyframes: {
 				'image-flow': {
-					'0%': {
+					'0%, 100%': {
 						'border-radius': '60% 40% 30% 70% / 60% 30% 70% 40%',
 					},
 					'50%': {
 						'border-radius': '30% 60% 70% 40% / 50% 60% 30% 60%',
 					},
-
-					'100%': {
-						'border-radius': '60% 40% 30% 70% / 60% 30% 70% 40%',
+				},
+				'status-glow': {
+					'0%': {
+						'box-shadow': '0 0 0 0 rgba(36, 171, 30, 0.5)',
+					},
+					'50%': {
+						'box-shadow': '0 0 10px 8px rgba(36, 171, 30, 0)',
 					},
 				},
 			},
 			animation: {
 				'image-flow': 'image-flow 8s ease-in-out infinite',
+				'status-glow': 'status-glow 2s ease-in-out infinite',
 			},
 		},
 	},
