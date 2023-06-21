@@ -1,22 +1,13 @@
+import CV from '../../assets/CV/BartoszBrodowskiCV.pdf';
+
 const Contact = () => {
-	const onButtonClick = () => {
-		fetch('src/assets/CV/BartoszBrodowskiCV.pdf').then((response) => {
-			response.blob().then((blob) => {
-				const fileURL = window.URL.createObjectURL(blob);
-				const alink = document.createElement('a');
-				alink.href = fileURL;
-				alink.download = 'BartoszBrodowskiCV.pdf';
-				alink.click();
-			});
-		});
-	};
 	return (
 		<div className='flex flex-col items-center gap-12'>
 			<div className='flex flex-col items-center gap-4'>
-				<h1 className='font-bold text-4xl text-main-green'>Get in touch with me!</h1>
-				<p className='text-lg'>
-					If you want to hire, have an offer of joining a cool project, or want to ask me anything,
-					hit me up!
+				<h1 className='font-bold text-6xl text-main-green'>Get in touch with me!</h1>
+				<p className='text-xl text'>
+					If you want to hire me, offer to join a cool project, or want to ask me anything, hit me
+					up!
 				</p>
 			</div>
 			<div className='flex items-center gap-12'>
@@ -40,11 +31,11 @@ const Contact = () => {
 				</div>
 				<div className='flex flex-col items-center gap-4'>
 					<p className='font-semibold text-xl'>Feel free to download my CV :)</p>
-					<button
-						onClick={() => onButtonClick()}
-						className='border-4 border-main-green rounded-full px-6 py-2 font-medium text-lg hover:bg-main-green hover:text-white duration-150'>
-						Get CV!
-					</button>
+					<a href={CV} download='BartoszBrodowskiCV' target='_blank' rel='noreferrer'>
+						<button className='border-4 border-main-green rounded-full px-6 py-2 font-medium text-lg hover:bg-main-green hover:text-white duration-150'>
+							Get CV!
+						</button>
+					</a>
 				</div>
 			</div>
 		</div>
