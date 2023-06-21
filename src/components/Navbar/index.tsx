@@ -9,9 +9,9 @@ const Navbar = () => {
 			<ul className='flex justify-between'>
 				<li
 					className={`${
-						path === '/home' ? 'bg-main-offwhite' : 'bg-transparent'
+						path === '/' ? 'bg-main-offwhite' : 'bg-transparent'
 					} + hover:cursor-pointer hover:text-[#51545a] hover:bg-[#eaeaea] rounded-full p-1 px-4 duration-150 font-medium`}
-					onClick={() => navigate('/home')}>
+					onClick={() => navigate('/')}>
 					Home
 				</li>
 				<li
@@ -23,18 +23,18 @@ const Navbar = () => {
 				</li>
 				<li
 					className={`${
-						path === '/techstack' ? 'bg-main-offwhite' : 'bg-transparent'
-					} + hover:cursor-pointer hover:text-[#51545a] hover:bg-[#eaeaea] rounded-full p-1 px-4 duration-150 font-medium`}
-					onClick={() => navigate('/techstack')}>
-					Tech Stack
-				</li>
-				<li
-					className={`${
 						path === '/projects' ? 'bg-main-offwhite' : 'bg-transparent'
 					} + hover:cursor-pointer hover:text-[#51545a] hover:bg-[#eaeaea] rounded-full p-1 px-4 duration-150 font-medium`}
 					onClick={() => navigate('/projects')}>
 					Projects
 				</li>
+				{/* <li
+					className={`${
+						path === '/techstack' ? 'bg-main-offwhite' : 'bg-transparent'
+					} + hover:cursor-pointer hover:text-[#51545a] hover:bg-[#eaeaea] rounded-full p-1 px-4 duration-150 font-medium`}
+					onClick={() => navigate('/techstack')}>
+					Tech Stack
+				</li> */}
 				<li
 					className={`${
 						path === '/contact' ? 'bg-main-offwhite' : 'bg-transparent'
