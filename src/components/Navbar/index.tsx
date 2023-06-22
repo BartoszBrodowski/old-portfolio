@@ -5,7 +5,7 @@ const Navbar = () => {
 	const navigate = useNavigate();
 	const path = location.pathname;
 	return (
-		<div className='bg-[#d3d3d3] w-2/3 mx-auto absolute top-[15%] max-w-[1280px] row-span-1 col-span-5 px-3 py-2 rounded-full'>
+		<div className='bg-main-gray w-2/3 mx-auto absolute top-[10%] max-w-[1280px] row-span-1 col-span-5 px-3 py-2 rounded-full'>
 			<ul className='flex justify-between'>
 				<li
 					className={`${

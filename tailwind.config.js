@@ -8,13 +8,14 @@ export default {
 				'main-white': '#f2eded',
 				'main-offwhite': '#f0f0f1',
 				'main-green': '#80c679',
+				'main-gray': '#d3d3d3',
 				'linkedin-blue': '#0a66c2',
 			},
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 			},
 			boxShadow: {
-				card: 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px',
+				card: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
 			},
 			backgroundImage: {
 				'profile-image': 'url(./src//assets/images/shina.png)',

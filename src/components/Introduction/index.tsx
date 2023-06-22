@@ -4,8 +4,8 @@ import Links from '../Links';
 
 const Introduction = () => {
 	return (
-		<div className='w-2/3 flex flex-col items-center justify-center h-screen'>
-			<div className='flex justify-center gap-16'>
+		<div className='flex flex-col items-center justify-center h-screen'>
+			<div className='flex justify-between gap-16'>
 				<div className='col-span-2 flex flex-col gap-4 justify-center h-max items-center relative'>
 					<ProfileImage />
 					<div className='flex flex-col items-center absolute top-80'>

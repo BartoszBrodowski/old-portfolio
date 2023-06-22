@@ -1,7 +1,7 @@
+import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
 import Introduction from './components/Introduction';
 import Navbar from './components/Navbar';
-// import TechStack from './components/TechStack';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
 			<Navbar />
 			<Routes>
 				<Route path='/' element={<Introduction />} />
+				<Route path='/about' element={<AboutMe />} />
 				<Route path='/contact' element={<Contact />} />
 			</Routes>
 		</div>
