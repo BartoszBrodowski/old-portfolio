@@ -14,14 +14,14 @@ const AboutMe = () => {
 						<h1 className='text-main-green text-2xl font-bold mt-8'>Hobbies</h1>
 						<div className='flex flex-col gap-4 text-lg'>
 							<p>
-								Formula 1 🏁 became my big interest back in 2021 and ever since I've been a big fan
+								🏁 Formula 1 became my big interest back in 2021 and ever since I've been a big fan
 								of the sport.
 							</p>
 							<p>
-								From time to time I really enjoy playing Electric Guitar 🎸, mostly fingerstyle.
+								🎸 From time to time I really enjoy playing Electric Guitar, mostly fingerstyle.
 							</p>
 							<p>
-								Music 💿, especially Rap genre has been a big part of my youth and it still is to
+								💿 Music, especially Rap genre has been a big part of my youth and it still is to
 								this day. I love listening to albums as a whole and expand my horizons while forming
 								my own opinion.
 							</p>

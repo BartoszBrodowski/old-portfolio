@@ -1,4 +1,5 @@
 import CV from '../../assets/CV/BartoszBrodowskiCV.pdf';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
 	return (
@@ -32,9 +33,13 @@ const Contact = () => {
 				<div className='flex flex-col items-center gap-4'>
 					<p className='font-semibold text-xl'>Feel free to download my CV :)</p>
 					<a href={CV} download='BartoszBrodowskiCV' target='_blank' rel='noreferrer'>
-						<button className='border-4 border-main-green rounded-full px-6 py-2 font-medium text-lg hover:bg-main-green hover:text-white duration-150'>
+						<motion.button
+							whileHover={{ scale: 1.1 }}
+							whileTap={{ scale: 0.9 }}
+							transition={{ duration: 0.2 }}
+							className='border-4 border-main-green rounded-full px-6 py-2 font-medium text-lg'>
 							Get CV!
-						</button>
+						</motion.button>
 					</a>
 				</div>
 			</div>
