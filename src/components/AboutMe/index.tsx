@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <div className="flex justify-center w-[1000px] h-[500px] mt-20">
+    <div className="flex gap-8 justify-center w-[1000px] h-[500px] mt-20">
       <div className="flex justify-center items-center">
         <div className="flex flex-col gap-4">
           <div>
@@ -31,7 +31,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-8 justify-center">
+      <div className="flex flex-col gap-8 justify-center w-full">
         <img
           className="rounded-lg max-h-full max-w-full"
           src="src/assets/images/GdanskView.jpg"
