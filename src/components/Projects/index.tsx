@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import GalacticRebornCard from "./GalacticRebornCard";
 
 const Projects = () => {
   const [clickedId, setClickedId] = useState(-1);
@@ -9,6 +10,9 @@ const Projects = () => {
     express: "src/assets/images/ExpressJS.svg",
     java: "src/assets/images/Java.svg",
     jwt: "src/assets/images/JWT.svg",
+    typescript: "src/assets/images/TypeScript.svg",
+    nextjs: "src/assets/images/NextJS.svg",
+    tailwindcss: "src/assets/images/TailwindCSS.svg",
   };
   const projects = [
     {
@@ -18,10 +22,21 @@ const Projects = () => {
       techstack: [
         techStackImages.javascript,
         techStackImages.express,
-        techStackImages.neo4j,
         techStackImages.jwt,
+        techStackImages.neo4j,
       ],
       link: "https://github.com/BartoszBrodowski/neo4j-moviedb-api",
+    },
+    {
+      title: "Galactic Reborn Landing Page",
+      description:
+        "Landing page of a blockchain game project. It was created with NextJS and TailwindCSS. The site contains information about documentation, roadmap of the project, team section and community links.",
+      techstack: [
+        techStackImages.typescript,
+        techStackImages.nextjs,
+        techStackImages.tailwindcss,
+      ],
+      link: "https://galacticreborn.io/",
     },
     {
       title: "Java projects",
@@ -32,21 +47,36 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="flex gap-8">
-      {projects.map((project, index) => (
-        <div className="min-w-[300px]" key={index}>
-          <ProjectCard
-            title={project.title}
-            description={project.description}
-            link={project.link}
-            id={index}
-            isClicked={clickedId === index}
-            setClickedId={setClickedId}
-            clickedId={clickedId}
-            techStack={project.techstack}
-          />
-        </div>
-      ))}
+    <div className="grid grid-cols-auto-fit justify-center gap-8">
+      {projects.map((project, index) =>
+        project.title === "Galactic Reborn Landing Page" ? (
+          <div className="min-w-[300px]" key={index}>
+            <GalacticRebornCard
+              title={project.title}
+              description={project.description}
+              link={project.link}
+              id={index}
+              isClicked={clickedId === index}
+              setClickedId={setClickedId}
+              clickedId={clickedId}
+              techStack={project.techstack}
+            />
+          </div>
+        ) : (
+          <div className="min-w-[300px]" key={index}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              link={project.link}
+              id={index}
+              isClicked={clickedId === index}
+              setClickedId={setClickedId}
+              clickedId={clickedId}
+              techStack={project.techstack}
+            />
+          </div>
+        )
+      )}
     </div>
   );
 };

@@ -43,6 +43,9 @@ export default {
         "image-flow": "image-flow 8s ease-in-out infinite",
         "status-glow": "status-glow 2s ease-in-out infinite",
       },
+      gridTemplateColumns: {
+        "auto-fit": "repeat(3, auto)",
+      },
     },
   },
   plugins: [],
