@@ -17,6 +17,7 @@ export default {
       },
       boxShadow: {
         card: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+        "full-page": "-1px 2px 0px 3000px rgba(0,0,0,0.69)",
       },
       backgroundImage: {
         "profile-image": "url(./src//assets/images/shina.png)",
@@ -45,6 +46,11 @@ export default {
       },
       gridTemplateColumns: {
         "auto-fit": "repeat(3, auto)",
+      },
+      gridColumn: {
+        "only-1": "1 / 1",
+        "only-2": "2 / 2",
+        "only-3": "3 / 3",
       },
     },
   },

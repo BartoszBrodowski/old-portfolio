@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import GalacticRebornCard from "./GalacticRebornCard";
+import clsx from "clsx";
+import "../../index.css";
 
 const Projects = () => {
   const [clickedId, setClickedId] = useState(-1);
@@ -28,7 +30,7 @@ const Projects = () => {
       link: "https://github.com/BartoszBrodowski/neo4j-moviedb-api",
     },
     {
-      title: "Galactic Reborn Landing Page",
+      title: "Galactic Reborn",
       description:
         "Landing page of a blockchain game project. It was created with NextJS and TailwindCSS. The site contains information about documentation, roadmap of the project, team section and community links.",
       techstack: [
@@ -47,36 +49,53 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-auto-fit justify-center gap-8">
-      {projects.map((project, index) =>
-        project.title === "Galactic Reborn Landing Page" ? (
-          <div className="min-w-[300px]" key={index}>
-            <GalacticRebornCard
-              title={project.title}
-              description={project.description}
-              link={project.link}
-              id={index}
-              isClicked={clickedId === index}
-              setClickedId={setClickedId}
-              clickedId={clickedId}
-              techStack={project.techstack}
-            />
-          </div>
-        ) : (
-          <div className="min-w-[300px]" key={index}>
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              link={project.link}
-              id={index}
-              isClicked={clickedId === index}
-              setClickedId={setClickedId}
-              clickedId={clickedId}
-              techStack={project.techstack}
-            />
-          </div>
-        )
-      )}
+    <div className="flex justify-center items-center">
+      <div className="grid grid-cols-3 grid-rows-2 justify-center gap-8">
+        {projects.map((project, index) =>
+          project.title === "Galactic Reborn" ? (
+            <div
+              className={clsx(`min-w-[300px] m-auto grid-item-${index + 1}`, {
+                "z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
+                  clickedId === index,
+              })}
+              key={index}
+            >
+              <GalacticRebornCard
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                id={index}
+                isClicked={clickedId === index}
+                setClickedId={setClickedId}
+                clickedId={clickedId}
+                techStack={project.techstack}
+              />
+            </div>
+          ) : (
+            <div
+              className={clsx(
+                `z-10 min-w-[300px] m-auto grid-item-${index + 1}`,
+                {
+                  "z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
+                    clickedId === index,
+                }
+              )}
+              key={index}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                id={index}
+                isClicked={clickedId === index}
+                setClickedId={setClickedId}
+                clickedId={clickedId}
+                techStack={project.techstack}
+              />
+            </div>
+          )
+        )}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import {
-  faAngleLeft,
+  // faAngleLeft,
   faWindowMaximize,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -39,23 +40,21 @@ const GalacticRebornCard: React.FC<GalacticRebornCardProps> = ({
     <motion.div
       transition={{ layout: { duration: durationTime, type: "spring" } }}
       layout
-      className="max-w-[530px] shadow-card rounded-lg p-4"
+      className="max-w-[530px] bg-white shadow-card rounded-lg p-4"
     >
-      <motion.div layout="position">
+      <motion.div onClick={() => handleClick()}>
         <motion.div
           layout="position"
-          onClick={() => handleClick()}
-          className="flex justify-between items-center cursor-pointer"
+          className="flex justify-between items-center cursor-pointer pr-2"
         >
           <motion.h2 className="font-bold text-xl text-galactic-reborn-purple">
             {title}
           </motion.h2>
           <motion.button
-            className="w-8 h-8"
-            animate={clickedId === id ? { rotate: -90 } : { rotate: 90 }}
-            layout
+            animate={clickedId === id ? { opacity: 1 } : { opacity: 0 }}
+            layout="position"
           >
-            <FontAwesomeIcon icon={faAngleLeft} />
+            <FontAwesomeIcon icon={faXmark} />
           </motion.button>
         </motion.div>
         <motion.div className="flex items-center gap-2" layout="position">
