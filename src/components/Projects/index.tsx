@@ -49,53 +49,48 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="flex justify-center items-center">
-      <div className="grid grid-cols-3 grid-rows-2 justify-center gap-8">
-        {projects.map((project, index) =>
-          project.title === "Galactic Reborn" ? (
-            <div
-              className={clsx(`min-w-[300px] m-auto grid-item-${index + 1}`, {
-                "z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
-                  clickedId === index,
-              })}
-              key={index}
-            >
-              <GalacticRebornCard
-                title={project.title}
-                description={project.description}
-                link={project.link}
-                id={index}
-                isClicked={clickedId === index}
-                setClickedId={setClickedId}
-                clickedId={clickedId}
-                techStack={project.techstack}
-              />
-            </div>
-          ) : (
-            <div
-              className={clsx(
-                `z-10 min-w-[300px] m-auto grid-item-${index + 1}`,
-                {
-                  "z-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
-                    clickedId === index,
-                }
-              )}
-              key={index}
-            >
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                link={project.link}
-                id={index}
-                isClicked={clickedId === index}
-                setClickedId={setClickedId}
-                clickedId={clickedId}
-                techStack={project.techstack}
-              />
-            </div>
-          )
-        )}
-      </div>
+    <div className="grid grid-cols-3 justify-center gap-8">
+      {projects.map((project, index) =>
+        project.title === "Galactic Reborn" ? (
+          <div
+            className={clsx(`min-w-[300px] m-auto grid-item-${index + 1}`, {
+              "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
+                clickedId === index,
+            })}
+            key={index}
+          >
+            <GalacticRebornCard
+              title={project.title}
+              description={project.description}
+              link={project.link}
+              id={index}
+              isClicked={clickedId === index}
+              setClickedId={setClickedId}
+              clickedId={clickedId}
+              techStack={project.techstack}
+            />
+          </div>
+        ) : (
+          <div
+            className={clsx(`min-w-[300px] m-auto grid-item-${index + 1}`, {
+              "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
+                clickedId === index,
+            })}
+            key={index}
+          >
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              link={project.link}
+              id={index}
+              isClicked={clickedId === index}
+              setClickedId={setClickedId}
+              clickedId={clickedId}
+              techStack={project.techstack}
+            />
+          </div>
+        )
+      )}
     </div>
   );
 };
