@@ -29,7 +29,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const handleClick = () => {
     if (isClicked && clickedId === id) {
       setClickedId(-1);
-    } else {
+    }
+    if (clickedId === -1) {
       setClickedId(id);
     }
   };
@@ -65,6 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <motion.div className="flex items-center gap-2" layout="position">
             {Object.entries(techStack).map(([key, value]) => (
               <motion.img
+                key={key}
                 className="w-6"
                 layout="position"
                 src={`${value}`}

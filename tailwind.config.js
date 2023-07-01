@@ -17,7 +17,7 @@ export default {
       },
       boxShadow: {
         card: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-        "full-page": "-1px 2px 0px 3000px rgba(0,0,0,0.5)",
+        "full-page": "-1px 2px 0px 2000px rgba(0,0,0,0.5)",
       },
       backgroundImage: {
         "profile-image": "url(./src//assets/images/shina.png)",

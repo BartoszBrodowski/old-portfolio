@@ -33,7 +33,8 @@ const GalacticRebornCard: React.FC<GalacticRebornCardProps> = ({
   const handleClick = () => {
     if (isClicked && clickedId === id) {
       setClickedId(-1);
-    } else {
+    }
+    if (clickedId === -1) {
       setClickedId(id);
     }
   };
@@ -57,13 +58,15 @@ const GalacticRebornCard: React.FC<GalacticRebornCardProps> = ({
             <motion.button
               animate={clickedId === id ? { opacity: 1 } : { opacity: 0 }}
               layout="position"
+              onClick={() => handleClick()}
             >
               <FontAwesomeIcon icon={faXmark} />
             </motion.button>
           </motion.div>
           <motion.div className="flex items-center gap-2" layout="position">
-            {Object.entries(techStack).map(([key, value]) => (
+            {Object.entries(techStack).map(([key, value], index) => (
               <motion.img
+                key={index}
                 className="w-6"
                 layout="position"
                 src={`${value}`}

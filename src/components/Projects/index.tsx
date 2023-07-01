@@ -54,7 +54,7 @@ const Projects = () => {
         project.title === "Galactic Reborn" ? (
           <div
             className={clsx(`min-w-[300px] m-auto grid-item-${index + 1}`, {
-              "z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
+              "z-10 absolute w-full h-full flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
                 clickedId === index,
             })}
             key={index}
@@ -73,7 +73,7 @@ const Projects = () => {
         ) : (
           <div
             className={clsx(`min-w-[300px] m-auto grid-item-${index + 1}`, {
-              "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
+              "absolute w-full h-full flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
                 clickedId === index,
             })}
             key={index}
