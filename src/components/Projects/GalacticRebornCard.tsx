@@ -1,13 +1,7 @@
-import { AnimatePresence, motion } from "framer-motion";
-import {
-  // faAngleLeft,
-  faWindowMaximize,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+import { faWindowMaximize, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
-
-const durationTime = 0.6;
 
 type GalacticRebornCardProps = {
   title: string;
@@ -18,6 +12,7 @@ type GalacticRebornCardProps = {
   id: number;
   clickedId: number;
   techStack: string[];
+  animationDurationTime: number;
 };
 
 const GalacticRebornCard: React.FC<GalacticRebornCardProps> = ({
@@ -29,6 +24,7 @@ const GalacticRebornCard: React.FC<GalacticRebornCardProps> = ({
   id,
   clickedId,
   techStack,
+  animationDurationTime,
 }) => {
   const handleClick = () => {
     if (isClicked && clickedId === id) {
@@ -39,64 +35,68 @@ const GalacticRebornCard: React.FC<GalacticRebornCardProps> = ({
     }
   };
   return (
-    <AnimatePresence>
-      <motion.div
-        transition={{ layout: { duration: durationTime, type: "spring" } }}
-        layout
-        className={clsx("max-w-[530px] bg-white shadow-card rounded-lg p-4", {
-          "shadow-full-page": isClicked && clickedId === id,
-        })}
-      >
-        <motion.div onClick={() => handleClick()}>
-          <motion.div
+    <motion.div
+      onClick={!isClicked ? handleClick : undefined}
+      transition={{
+        layout: { duration: animationDurationTime, type: "spring" },
+      }}
+      layout
+      className={clsx("max-w-[530px] bg-white shadow-card rounded-lg", {
+        "shadow-full-page": isClicked && clickedId === id,
+      })}
+    >
+      <motion.div className="cursor-pointer" onClick={() => handleClick()}>
+        <motion.div
+          layout="position"
+          className="flex justify-between items-center p-4 pb-2"
+        >
+          <motion.h2 className="font-bold text-xl text-galactic-reborn-purple">
+            {title}
+          </motion.h2>
+          <motion.button
+            animate={clickedId === id ? { opacity: 1 } : { opacity: 0 }}
             layout="position"
-            className="flex justify-between items-center cursor-pointer pr-2"
+            onClick={() => handleClick()}
           >
-            <motion.h2 className="font-bold text-xl text-galactic-reborn-purple">
-              {title}
-            </motion.h2>
-            <motion.button
-              animate={clickedId === id ? { opacity: 1 } : { opacity: 0 }}
+            <FontAwesomeIcon icon={faXmark} />
+          </motion.button>
+        </motion.div>
+        <motion.div
+          className="flex items-center gap-2 p-4 pt-0"
+          layout="position"
+        >
+          {Object.entries(techStack).map(([key, value], index) => (
+            <motion.img
+              key={index}
+              className="w-6"
               layout="position"
-              onClick={() => handleClick()}
+              src={`${value}`}
+              alt={`${key} logo`}
+            />
+          ))}
+        </motion.div>
+      </motion.div>
+      {isClicked && (
+        <motion.div
+          className="flex flex-col gap-4 mt-4  px-4 pb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: animationDurationTime }}
+        >
+          <motion.p>{description}</motion.p>
+          <motion.div className="flex items-center gap-2">
+            <FontAwesomeIcon icon={faWindowMaximize} />
+            <motion.a
+              className="text-linkedin-blue hover:underline"
+              href={link}
+              target="_blank"
             >
-              <FontAwesomeIcon icon={faXmark} />
-            </motion.button>
-          </motion.div>
-          <motion.div className="flex items-center gap-2" layout="position">
-            {Object.entries(techStack).map(([key, value], index) => (
-              <motion.img
-                key={index}
-                className="w-6"
-                layout="position"
-                src={`${value}`}
-                alt={`${key} logo`}
-              />
-            ))}
+              {link}
+            </motion.a>
           </motion.div>
         </motion.div>
-        {isClicked && (
-          <motion.div
-            className="flex flex-col gap-4 mt-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: durationTime }}
-          >
-            <motion.p>{description}</motion.p>
-            <motion.div className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faWindowMaximize} />
-              <motion.a
-                className="text-linkedin-blue hover:underline"
-                href={link}
-                target="_blank"
-              >
-                {link}
-              </motion.a>
-            </motion.div>
-          </motion.div>
-        )}
-      </motion.div>
-    </AnimatePresence>
+      )}
+    </motion.div>
   );
 };
 

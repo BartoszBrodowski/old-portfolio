@@ -4,6 +4,8 @@ import GalacticRebornCard from "./GalacticRebornCard";
 import clsx from "clsx";
 import "../../index.css";
 
+const durationTime = 0.6;
+
 const Projects = () => {
   const [clickedId, setClickedId] = useState(-1);
   const techStackImages = {
@@ -68,6 +70,7 @@ const Projects = () => {
               setClickedId={setClickedId}
               clickedId={clickedId}
               techStack={project.techstack}
+              animationDurationTime={durationTime}
             />
           </div>
         ) : (
@@ -87,6 +90,7 @@ const Projects = () => {
               setClickedId={setClickedId}
               clickedId={clickedId}
               techStack={project.techstack}
+              animationDurationTime={durationTime}
             />
           </div>
         )
