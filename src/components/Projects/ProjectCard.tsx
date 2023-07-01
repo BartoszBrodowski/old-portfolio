@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import clsx from "clsx";
 
-const durationTime = 1;
+const durationTime = 0.6;
 
 type ProjectCardProps = {
   title: string;
@@ -35,9 +36,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <motion.div>
       <motion.div
-        transition={{ layout: { duration: durationTime, type: "spring" } }}
+        transition={{
+          layout: {
+            duration: durationTime,
+            type: "spring",
+          },
+        }}
         layout
-        className="max-w-[530px] bg-white shadow-card rounded-lg p-4"
+        className={clsx("max-w-[530px] bg-white shadow-card rounded-lg p-4", {
+          "shadow-full-page": isClicked && clickedId === id,
+        })}
       >
         <motion.div onClick={() => handleClick()} layout="position">
           <motion.div
