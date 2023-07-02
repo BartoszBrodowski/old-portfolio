@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center gap-12 w-screen px-4 xs:px-12">
+    <div className="flex flex-col items-center gap-12 w-screen px-4 xs:px-12 pt-20 lg:mt-0">
       <div className="flex flex-col items-center gap-4">
         <h1 className="font-bold text-2xl sm:text-3xl lg:text-5xl text-main-green">
           Get in touch with me!

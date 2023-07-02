@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <div className="flex gap-8 justify-center items-center mx-auto w-2/3">
+    <div className="flex gap-8 justify-center items-center mx-auto w-2/3 pt-20 lg:mt-0">
       <div className="flex justify-center items-center">
         <div className="flex flex-col gap-4 sm:gap-12">
           <div>
@@ -28,8 +28,8 @@ const AboutMe = () => {
               </p>
               <p>
                 💿 Music, especially Rap genre has been a big part of my youth
-                and it still is to this day. I love listening to albums as a
-                whole and expand my horizons while forming my own opinion.
+                and it still is to this day. I love listening to albums and
+                expanding my horizons while forming my own opinion.
               </p>
             </div>
           </div>
