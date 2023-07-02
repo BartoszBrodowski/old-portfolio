@@ -4,7 +4,7 @@ import Links from "../Links";
 
 const Introduction = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen pt-20 lg:mt-0">
+    <div className="flex flex-col items-center justify-center h-screen">
       <div className="flex flex-col lg:flex-row justify-between gap-16">
         <div className="col-span-2 flex flex-col gap-4 justify-center h-max items-center relative">
           <ProfileImage />

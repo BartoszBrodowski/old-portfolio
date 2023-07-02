@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <div className="w-full flex flex-col items-center m-auto font-poppins text-main-black">
+    <div className="w-full flex flex-col items-center m-auto font-poppins text-main-black pt-20 lg:mt-0">
       <Navbar />
       <Routes>
         <Route path="/" element={<Introduction />} />
