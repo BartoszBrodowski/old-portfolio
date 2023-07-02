@@ -2,7 +2,6 @@ import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import GalacticRebornCard from "./GalacticRebornCard";
 import clsx from "clsx";
-import "../../index.css";
 
 const durationTime = 0.6;
 
