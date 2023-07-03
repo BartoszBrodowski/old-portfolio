@@ -38,8 +38,8 @@ const AboutMe = () => {
       <div className="hidden xl:flex flex-col gap-8 justify-center w-full">
         <img
           className="rounded-lg"
-          src="src/assets/images/GdanskView.jpg"
-          alt="Shiba dog and a gray cat sitting on a couch"
+          src="/assets/images/GdanskView.jpg"
+          alt="View of Gdansk"
         />
       </div>
     </div>

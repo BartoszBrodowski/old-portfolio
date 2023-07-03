@@ -11,7 +11,7 @@ type ProjectCardProps = {
   setClickedId: (id: number) => void;
   id: number;
   clickedId: number;
-  techStack: string[];
+  techStack: {};
   animationDurationTime: number;
 };
 
@@ -44,8 +44,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           },
         }}
         layout
-        className={clsx("max-w-[530px] bg-white shadow-card rounded-lg", {
-          "lg:shadow-full-page": isClicked && clickedId === id,
+        className={clsx("mx-4 max-w-[530px] bg-white shadow-card rounded-lg", {
+          "shadow-full-page": isClicked && clickedId === id,
         })}
       >
         <motion.div
@@ -71,33 +71,33 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             className="flex items-center gap-2 p-4 pt-0"
             layout="position"
           >
-            {Object.entries(techStack).map(([key, value]) => (
+            {Object.entries(techStack).map(([name, image_path], index) => (
               <motion.img
-                key={key}
+                key={index}
                 className="w-6"
                 layout="position"
-                src={`${value}`}
-                alt={`${key} logo`}
+                src={`${image_path}`}
+                alt={`${name} logo`}
               />
             ))}
           </motion.div>
         </motion.div>
         {isClicked && (
           <motion.div
-            className="flex flex-col gap-4 mt-4 px-4 pb-4"
+            className="flex flex-col gap-4 px-4 pb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: animationDurationTime }}
           >
             <motion.p>{description}</motion.p>
             <motion.div className="flex items-center gap-2">
-              <img
+              <motion.img
                 className="w-6"
-                src="src/assets/images/Github.svg"
+                src="/assets/images/Github.svg"
                 alt="Github logo"
               />
               <motion.a
-                className="text-linkedin-blue hover:underline"
+                className="text-sm sm:text-base text-linkedin-blue hover:underline"
                 href={link}
                 target="_blank"
               >

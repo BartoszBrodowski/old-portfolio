@@ -1,4 +1,4 @@
-import CV from "../../assets/CV/BartoszBrodowskiCV.pdf";
+import CV from "/assets/CV/BartoszBrodowskiCV.pdf";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -19,8 +19,8 @@ const Contact = () => {
             <div className="flex gap-4 items-center">
               <img
                 className="w-8 md:w-12 color-main-green"
-                src="src/assets/images/Mail.svg"
-                alt="Mail"
+                src="/assets/images/Mail.svg"
+                alt="Mail icon"
               />
               <div>
                 <p className="font-semibold text-lg md:text-xl">Mail</p>
@@ -32,8 +32,8 @@ const Contact = () => {
             <div className="flex gap-4 items-center">
               <img
                 className="w-8 md:w-12"
-                src="src/assets/images/Location.svg"
-                alt="Mail"
+                src="/assets/images/Location.svg"
+                alt="Location icon"
               />
               <div>
                 <p className="font-semibold text-lg md:text-xl">Location</p>
@@ -58,7 +58,7 @@ const Contact = () => {
               transition={{ duration: 0.2 }}
               className="flex items-center gap-2 border-4 border-main-green rounded-full px-6 py-2 font-medium text-lg"
             >
-              <img className="w-5" src="src/assets/images/Download.svg" />
+              <img className="w-5" src="/assets/images/Download.svg" />
               Get CV
             </motion.button>
           </a>

@@ -9,10 +9,10 @@ const Introduction = () => {
         <div className="col-span-2 flex flex-col gap-4 justify-center h-max items-center relative">
           <ProfileImage />
           <div className="flex flex-col items-center absolute top-28 xs:top-40 lg:top-80">
-            <p className="flex items-center gap-2 text-lg lg:text-2xl">
-              <div className="animate-status-glow bg-[#24AB1E] rounded-full w-2 h-2 xs:w-3 xs:h-3 lg:w-4 lg:h-4"></div>
+            <div className="flex items-center gap-2 text-lg lg:text-2xl">
+              <p className="animate-status-glow bg-[#24AB1E] rounded-full w-2 h-2 xs:w-3 xs:h-3 lg:w-4 lg:h-4"></p>
               Looking for a job!
-            </p>
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-4 text-center lg:text-left justify-center">
