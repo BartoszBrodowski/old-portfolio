@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					},
 				}}
 				layout
-				className={clsx('mx-4 max-w-[600px] bg-white shadow-card rounded-lg', {
+				className={clsx('mx-4 max-w-[550px] bg-white shadow-card rounded-lg', {
 					'shadow-full-page': isClicked && clickedId === id,
 				})}>
 				<motion.div className='cursor-pointer' onClick={() => handleClick()} layout='position'>
