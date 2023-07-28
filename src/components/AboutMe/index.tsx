@@ -6,7 +6,7 @@ const AboutMe = () => {
 					<div>
 						<h1 className='text-main-green text-xl sm:text-xl lg:text-2xl font-bold'>About me</h1>
 						<p className='text-sm sm:text-base lg:text-lg'>
-							I'm a 2nd year Computer Science student at University of Gdańsk 🎓 keen on learning
+							I'm a 3rd year Computer Science student at University of Gdańsk 🎓 keen on learning
 							new things and taking on challenges 💪 and open to new friendships.
 						</p>
 					</div>

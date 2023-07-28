@@ -16,6 +16,8 @@ const Projects = () => {
 		typescript: '/assets/images/TypeScript.svg',
 		nextjs: '/assets/images/NextJS.svg',
 		tailwindcss: '/assets/images/TailwindCSS.svg',
+		python: '/assets/images/Python.svg',
+		postgresql: '/assets/images/PostgreSQL.svg',
 	};
 	const projects = [
 		{
@@ -47,6 +49,13 @@ const Projects = () => {
 				"Repository of Java projects from university classes. They allowed me to get a solid understanding of topics such as encapsulation, abstract classed, inheritance and rules of proper OOP. After the course I feel very confident in my ability to write clean Java code. (There's not many commits as the work was mostly done at the university and the time was limited).",
 			techstack: { Java: techStackImages.java },
 			link: 'https://github.com/BartoszBrodowski/java-uni.git',
+		},
+		{
+			title: 'F1 Webscraper',
+			description:
+				"Project created using BeautifulSoup and containerized PostgreSQL database. I've created a webscraper and DB injector using OOP to scrape data about F1 drivers, teams and races and store it in the database.",
+			techstack: { Python: techStackImages.python, PostgreSQL: techStackImages.postgresql },
+			link: 'https://github.com/BartoszBrodowski/f1-drivers-statistics',
 		},
 	];
 	return (
